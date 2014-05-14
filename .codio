@@ -1,18 +1,9 @@
 {
-// Configure your Run and Preview buttons here.
-
-// Run button configuration
   "commands": {
-        "Node version": "node --version"
+        "Do Stuff": "grunt"
   },
-
-// Preview button configuration
   "preview": {
-        "Project Index (static)": "https://{{domain}}/{{index}}",
-        "Current File (static)": "https://{{domain}}/{{filepath}}",
-        "Project Index (static)": "http://rhyansdesignstudio.com/beta/{{index}}",
-        "Current File (static)": "http://rhyansdesignstudio.com/beta/{{filepath}}",
-        "Box URL": "http://{{domain}}:3000/",
-        "Box URL SSL": "https://{{domain}}:9500/"
+        "Live": "http://rhyansdesignstudio.com/beta/{{index}}",
+        "Github": "http://kylekinnaman.github.io/rhyansdesignstudio/{{index}}"
   }
 }
