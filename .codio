@@ -1,9 +1,10 @@
 {
   "commands": {
-        "Do Stuff": "grunt"
+        "Grunt": "grunt"
   },
   "preview": {
         "Live": "http://rhyansdesignstudio.com/beta/{{index}}",
-        "Github": "http://kylekinnaman.github.io/rhyansdesignstudio/{{index}}"
+        "Github": "http://kylekinnaman.github.io/rhyansdesignstudio/{{index}}",
+        "Preview": "http://{{domain}}/{{index}}"
   }
 }

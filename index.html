@@ -20,6 +20,7 @@
 		html {
 			position: relative;
 			min-height: 100%;
+            min-width: 20em;
 			background-color: #424752;
 		}
 
@@ -90,10 +91,14 @@
 		p {
 			margin-bottom: 1em;
 		}
+      
+    #home ul, #firstView ul {
+      margin: 0 2em;
+    }
 
 		.hero {
 			width: 15em;
-			margin: 1em auto;
+			margin: 2em auto;
 			outline: .5em solid #ffcb05;
 		}
 
@@ -142,37 +147,18 @@
 			<a id="menuBtn" ui-sref="menu" class="icon icon-menu float_right"></a>
 		</header>
 		<div id="overlay" ui-view="menu" ng-cloak></div>
-		<div id="main" ui-view="main" ng-cloak>
-			<section id="firstView">
-				<h1>Brilliance to last a lifetime</h1>
-				<img class="hero" src="images/ring.png">
-				<p>We create and carry a wide array of unique, quality jewelry pieces. Our selection and ability to personalize any piece sets Rhyans Design Studio apart from the typical retail jewelry store.</p>
-				<p>Custom jewelry is beautiful, unique and affordable, and our design experience allows you to create a special piece, tailored to your budget. We love being part ofyour special moments and helping you through the creative process.</p>
-				<p>Come by the Rhyans Design Studio for your free consultation.</p>
-				<h2 class="padtop2">Capture your moment.</h2>
-				<h2>Keep it for a lifetime.</h2>
-				<footer class="footer_section">
-					<div class="footer_left float_left">
-					<a href="https://www.google.com/maps/place/Rhyans+Design+Studio/@33.9767389,-84.479676,17z/data=!4m2!3m1!1s0x0:0xeadf077ad3fd7bb7">
-						<div class="icon icon-map float_left"></div>
-						1050 East Piedmont<br />Marietta, GA 30062
-					</a>
-					</div>
-					<div class="footer_right float_right">
-						<a href="tel://6785605718">
-							<div class="icon icon-phone float_left"></div>
-							(678) 560-5718
-						</a>
-					</div>
-				</footer>
-			</section>
-		</div>
+		<div id="main" ui-view="main" ng-cloak ng-controller="postItCtrl"></div>
 
 		<link rel="stylesheet" href="styles/rhyans.css" />
 		<link rel="stylesheet" href="styles/icons.css">
+        <!--
+          [if IE 7]>
+            <link rel="stylesheet" href="styles/icons-ie7.css">
+          <![endif]
+        -->
 		<script src='scripts/fastclick.js'></script>
 		<script>
-			menuBtn = document.querySelector('#menuBtn');
+      menuBtn = document.querySelector('#menuBtn');
 			menuBtn.style.display = 'inline';
 			
 			WebFontConfig = {
@@ -195,6 +181,8 @@
  		<script data-require="angular.js@1.2.15" data-semver="1.2.15" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 		<script src="scripts/angular-ui-router.0.2.10.js"></script>
 		<script src="scripts/angular-animate.1.2.8.js"></script>
-		<script src="scripts/app.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/postCtrl.js"></script>
+<!--     <script src="scripts/controllers/postItCtrl.js"></script> -->
 	</body>
 </html>

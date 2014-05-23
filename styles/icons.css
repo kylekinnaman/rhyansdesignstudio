@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'rhyans';
-  src: url('../fonts/rhyans.eot?31360628');
-  src: url('../fonts/rhyans.eot?31360628#iefix') format('embedded-opentype'),
-       url('../fonts/rhyans.woff?31360628') format('woff'),
-       url('../fonts/rhyans.ttf?31360628') format('truetype'),
-       url('../fonts/rhyans.svg?31360628#rhyans') format('svg');
+  src: url('../fonts/rhyans.eot?23965623');
+  src: url('../fonts/rhyans.eot?23965623#iefix') format('embedded-opentype'),
+       url('../fonts/rhyans.woff?23965623') format('woff'),
+       url('../fonts/rhyans.ttf?23965623') format('truetype'),
+       url('../fonts/rhyans.svg?23965623#rhyans') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'rhyans';
-    src: url('../fonts/rhyans.svg?31360628#rhyans') format('svg');
+    src: url('../fonts/rhyans.svg?23965623#rhyans') format('svg');
   }
 }
 */
@@ -51,8 +51,8 @@
 }
  
 .icon-arrow:before { content: '\e800'; } /* '' */
-.icon-menu:before { content: '\e801'; } /* '' */
 .icon-services:before { content: '\e802'; } /* '' */
 .icon-about:before { content: '\e803'; } /* '' */
 .icon-map:before { content: '\e804'; } /* '' */
 .icon-phone:before { content: '\e805'; } /* '' */
+.icon-menu:before { content: '\e801'; } /* '' */
