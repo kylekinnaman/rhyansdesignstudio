@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+1<!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="user-scalable=no, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0,width=device-width">
 		<style>
 		html,body,a,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;line-height:1.25em;}
 		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -20,12 +20,11 @@
 		html {
 			position: relative;
 			min-height: 100%;
-            min-width: 20em;
 			background-color: #424752;
 		}
 
 		body {
-			margin: 0 0 6em;
+      margin: 0 0 6em;
 			font-family: 'Lato', 'sans-serif';
 			color: #fff;
 		}
@@ -60,7 +59,7 @@
 				height: 4em;
 				width: 15em;
 				display: block;
-				background-image: url(../images/logo.png);
+				background-image: url(/images/logo.png);
 				background-size: 75% auto;
 				background-repeat: no-repeat;
 			}
@@ -71,10 +70,9 @@
 			}
 
 		section {
-		    clear: both;
-			width: 16em;
-			margin: 1em auto;
-			padding: 0 0 1em;
+		  clear: both;
+			width: 80%;
+			margin: 2em auto;
 		}
 
 		h1 {
@@ -117,7 +115,7 @@
 		}
 
 		.footer_section {
-			width: 90%;
+			width: 21em;
 			margin: 0 auto;
 			font-size: .875em;
 			padding: 1em 6% 0 3%;
@@ -130,37 +128,42 @@
 		#homeBtn{
 			height: 4em;
 			width: 15em;
-			background-image: url(images/logo.png);
+			background-image: url(/images/logo.png);
 			background-size: 75% auto;
 			background-repeat: no-repeat;
 			margin: 0 auto;
 		}
 
-			#menuBtn {
+			.delayed_display {
 				display: none;
+        opacity: 0;
 			}
 </style>
 	</head>
 	<body ng-app="app">
-        <header>
+    <header>
 			<a id="homeBtn" ui-sref="home" class="float_left"></a>
 			<a id="menuBtn" ui-sref="menu" class="icon icon-menu float_right"></a>
+      <a ui-sref="about" class="icon icon-about aboutBtn float_right delayed_display">About Us</a>
+      <a ui-sref="services.index" class="icon icon-services servicesBtn float_right delayed_display">Services</a>
 		</header>
 		<div id="overlay" ui-view="menu" ng-cloak></div>
-		<div id="main" ui-view="main" ng-cloak ng-controller="postItCtrl"></div>
+		<div id="main" ui-view="main" ng-cloak></div>
 
-		<link rel="stylesheet" href="styles/rhyans.css" />
-		<link rel="stylesheet" href="styles/icons.css">
+		<link rel="stylesheet" href="/styles/rhyans.css" />
+		<link rel="stylesheet" href="/styles/icons.css">
         <!--
           [if IE 7]>
             <link rel="stylesheet" href="styles/icons-ie7.css">
           <![endif]
         -->
-		<script src='scripts/fastclick.js'></script>
+		<script src='/scripts/fastclick.js'></script>
 		<script>
-      menuBtn = document.querySelector('#menuBtn');
-			menuBtn.style.display = 'inline';
-			
+      delayedDisplay = document.querySelectorAll('.delayed_display');
+      for(var i = 0; i < delayedDisplay.length; ++i) {
+        delayedDisplay[i].style.display = 'inline';
+      }
+      
 			WebFontConfig = {
 			  google: {
 			    families: ['Lato']
@@ -178,11 +181,10 @@
 			    FastClick.attach(document.body);
 			}, false);
 		</script>
+    <script src="/scripts/controllers/postCtrl.js"></script>
  		<script data-require="angular.js@1.2.15" data-semver="1.2.15" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-		<script src="scripts/angular-ui-router.0.2.10.js"></script>
-		<script src="scripts/angular-animate.1.2.8.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/postCtrl.js"></script>
-<!--     <script src="scripts/controllers/postItCtrl.js"></script> -->
+		<script src="/scripts/angular-ui-router.0.2.10.js"></script>
+		<script src="/scripts/angular-animate.1.2.8.js"></script>
+    <script src="/scripts/app.js"></script>
 	</body>
 </html>

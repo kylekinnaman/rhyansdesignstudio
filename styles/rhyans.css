@@ -1,9 +1,13 @@
-#firstView {
-  display: none;
+body {
+  overflow-y: scroll;
 }
 
-body *:not(script) {
-  display: inherit;
+a {
+  display: block;
+}
+
+img {
+  max-width: 100%;
 }
 
 #home li, #firstView li {
@@ -33,6 +37,10 @@ footer {
   padding: 0;
 }
 
+.customBtn, .repairBtn, .redesignBtn {
+  display: block;
+}
+
 #services_mobile_nav {
   width: 80%;
   margin: 1em auto;
@@ -51,6 +59,10 @@ footer {
 
 }
 
+  #menuBtn:before, #services_mobile_nav {
+    opacity: 1;
+  }
+
 #services_mobile_nav > a:first-of-type, #services_mobile_nav > a:last-of-type {
   margin: 0 auto 1em;
 }
@@ -65,7 +77,7 @@ footer {
     padding-bottom: .25em;    
 }
 
-.aboutBtn, .servicesBtn {
+.bigBtn {
   font-size: 1.25em;
   padding: 1em 0 1em 1em;
 }
@@ -84,16 +96,14 @@ footer {
     margin-bottom: .75em;
 }
 
-@media only screen and (min-width:400px) and (max-width:720px) {
-  body {
-    margin: 0 auto 6em;
+  .delayed_display {
+    opacity: 0;
+    border: none;
   }
 
-  section {
-    width: 80%;
-    margin: 1em auto;
-    margin: 0 0 2em 2em;
-    position: relative;
+@media only screen and (min-width:400px) {
+  body {
+    margin: 0 auto 6em;
   }
 
   h1 {
@@ -106,30 +116,21 @@ footer {
     margin: 0 0 0 1em;
   }
  
-  footer {
-      background-color: transparent;
+  .footer_section {
+		width: 22.85em;
+    padding: 1em 0 0;
   }
 }
 
-@media only screen and (min-width:721px) and (max-width:1000px) {
-  body {
-    margin: 0 auto 6em;
-  }
-
+@media only screen and (min-width:721px) {
   #menuBtn:before {
-      display: none;
+      opacity: 0;
+  }
+  
+  .delayed_display {
+    opacity: 1;
   }
 
-  section {
-    width: 80%;
-    margin: 1em auto;
-    padding: 0 0 1em;
-  }
-  
-  #services_mobile_nav {
-    display: none;
-  }
-  
   section p {
     font-size: 1.5em;
   }
@@ -149,15 +150,29 @@ footer {
     margin: 0 0 1em 1em;
     outline: .5em solid #ffcb05;
   }
- 
+
   .footer_section {
-    width: 50%;
-    margin: 0 auto;
-    font-size: .875em;
+		width: 22.85em;
+    padding: 1em 0 0;
+  }
+}
+
+@media only screen and (min-width:1001px) {
+  body {
+    margin: 0 auto 6em;
+  }
+
+  .footer_section {
+		width: 22.85em;
+    padding: 1em 0 0;
   }
 }
 
 /* animations */
+#menuBtn:before, #services_mobile_nav, .aboutBtn, .servicesBtn {
+  -webkit-transition: opacity .5s ease-in-out;
+}
+
 [ui-view="main"].ng-enter, [ui-view="main"].ng-leave, [ui-view="services"].ng-enter, [ui-view="services"].ng-leave, [ui-view="menu"].ng-enter, [ui-view="menu"].ng-leave {
   position: absolute;
   left: 0;

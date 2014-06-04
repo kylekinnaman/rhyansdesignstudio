@@ -1,41 +1,26 @@
-var data,
-    postID,
-    menuBtn = document.querySelector('#menuBtn');
-
-menuBtn.style.display = 'inline';
+var media = {},
+    pages = {};
 
 function postCtrl(c) {
-console.log('current state: ' + c);
-  switch(c) {
-    case 'home':
-      getJSON(c, 185);
-      break;
-    case 'about':
-      getJSON(c, 324);
-      break;
-    case 'services.index':
-      getJSON(c, 185);
-      break;
-    case 'services.custom':
-      getJSON(c, 324);
-      break;
-    case 'services.repairs':
-      getJSON(c, 185);
-      break;
-    case 'services.redesign':
-      getJSON(c, 324);
-      break;
-  }
-}
-
-function getJSON(c, postID) {
-  var	xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      data = JSON.parse(xhr.response);
-      document.getElementById(c).innerHTML = data.content;
+  if(pages[c]) {
+// pages[c].gallery.indexOf(NaN) > -1
+    //     if(pages[c].gallery)
+    targetID = document.querySelector('#' + c);
+    var gallery = document.createElement('div');
+    gallery.classList.add('gallery');
+    for(var i in pages[c].gallery) {
+      pages[c].gallery[i] = isNaN(pages[c].gallery[i]) ? 0 : +pages[c].gallery[i];
+      if(pages[c].gallery[i] !== 0) {
+        var img = document.createElement('img'),
+            id = pages[c].gallery[i];
+        img.src = media[pages[c].gallery[i]];
+        if(img.src !== window.location.protocol + '//' + window.location.host + '/undefined') {
+          gallery.appendChild(img);
+        }
+      }
     }
-  };
-  xhr.open('GET', 'http://www.rhyansdesignstudio.com/wp_api/v1/posts/' + postID);
-  xhr.send();
+    targetID.innerHTML = '';
+    targetID.appendChild(gallery);
+    targetID.innerHTML += pages[c].content;
+  }
 }
