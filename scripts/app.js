@@ -25,10 +25,10 @@
               c.html5Mode(true);
               a.otherwise('/');
               b.state('home', {
-                url: '/',
+                url: '/beta/',
                 views: {
                   'main': {
-                    templateUrl: '/templates/home.html',
+                    templateUrl: 'templates/home.html',
                     controller: function($scope){
                       postCtrl('home');
                     }
@@ -37,7 +37,7 @@
               }).state('menu', {
                 views: {
                   'menu': {
-                    templateUrl: '/templates/menu.html'
+                    templateUrl: 'templates/menu.html'
                   }
                 }
               }).state('services', {
@@ -45,14 +45,14 @@
                 abstract: true,
                 views: {
                   'main': {
-                    templateUrl: '/templates/services.html'
+                    templateUrl: 'templates/services.html'
                   }
                 }
               }).state('services.index', {
                 url: '/',
                 views: {
                   'services': {
-                    templateUrl: '/templates/services.index.html',
+                    templateUrl: 'templates/services.index.html',
                     controller: function($scope){
                       postCtrl('services_index');
                     }
@@ -62,7 +62,7 @@
                 url: '/custom',
                 views: {
                   'services': {
-                    templateUrl: '/templates/services.custom.html',
+                    templateUrl: 'templates/services.custom.html',
                     controller: function($scope){
                       postCtrl('services_custom');
                     }
@@ -72,7 +72,7 @@
                 url: '/repairs',
                 views: {
                   'services': {
-                    templateUrl: '/templates/services.repairs.html',
+                    templateUrl: 'templates/services.repairs.html',
                     controller: function($scope){
                       postCtrl('services_repairs');
                     }
@@ -82,7 +82,7 @@
                 url: '/redesign',
                 views: {
                   'services': {
-                    templateUrl: '/templates/services.redesign.html',
+                    templateUrl: 'templates/services.redesign.html',
                     controller: function($scope){
                       postCtrl('services_redesign');
                     }
@@ -92,7 +92,7 @@
                 url: '/about',
                 views: {
                   'main': {
-                    templateUrl: '/templates/about.html',
+                    templateUrl: 'templates/about.html',
                     controller: function($scope){
                       postCtrl('about');
                     }

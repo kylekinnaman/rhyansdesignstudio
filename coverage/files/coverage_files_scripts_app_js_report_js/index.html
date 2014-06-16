@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - coverage/files/scripts_app_js/report.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome-ie7.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>coverage/files/scripts_app_js/report.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">23.38</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">1</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">10.98</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">2.39</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">__report = {&quot;info&quot;:{&quot;file&quot;:&quot;scripts/app.js&quot;,&quot;fileShort&quot;:&quot;scripts/app.js&quot;,&quot;fileSafe&quot;:&quot;scripts_app_js&quot;,&quot;link&quot;:&quot;files/scripts_app_js/index.html&quot;},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:1,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:124,&quot;logical&quot;:76},&quot;cyclomatic&quot;:3,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:13,&quot;total&quot;:190,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:89,&quot;total&quot;:237,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:427,&quot;vocabulary&quot;:102,&quot;difficulty&quot;:17.308988764044944,&quot;volume&quot;:2849.1256210218285,&quot;effort&quot;:49315.4833616194,&quot;bugs&quot;:0.9497085403406095,&quot;time&quot;:2739.749075645522},&quot;params&quot;:9}},&quot;functions&quot;:[{&quot;name&quot;:&quot;getPosts&quot;,&quot;line&quot;:1,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:110,&quot;logical&quot;:4},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:6,&quot;total&quot;:10,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:9,&quot;total&quot;:12,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:22,&quot;vocabulary&quot;:15,&quot;difficulty&quot;:4,&quot;volume&quot;:85.95159310338741,&quot;effort&quot;:343.80637241354964,&quot;bugs&quot;:0.02865053103446247,&quot;time&quot;:19.10035402297498},&quot;params&quot;:0}},{&quot;name&quot;:&quot;xhr.onreadystatechange&quot;,&quot;line&quot;:3,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:105,&quot;logical&quot;:12},&quot;cyclomatic&quot;:2,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:12,&quot;total&quot;:50,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:33,&quot;total&quot;:60,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:110,&quot;vocabulary&quot;:45,&quot;difficulty&quot;:10.909090909090908,&quot;volume&quot;:604.1038405962643,&quot;effort&quot;:6590.22371559561,&quot;bugs&quot;:0.20136794686542142,&quot;time&quot;:366.12353975531164},&quot;params&quot;:0}},{&quot;name&quot;:&quot;&lt;anonymous&gt;&quot;,&quot;line&quot;:24,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:80,&quot;logical&quot;:41},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:5,&quot;total&quot;:88,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:37,&quot;total&quot;:110,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:198,&quot;vocabulary&quot;:42,&quot;difficulty&quot;:7.432432432432432,&quot;volume&quot;:1067.6788497101945,&quot;effort&quot;:7935.450910008201,&quot;bugs&quot;:0.35589294990339815,&quot;time&quot;:440.8583838893445},&quot;params&quot;:3}},{&quot;name&quot;:&quot;controller&quot;,&quot;line&quot;:96,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:3,&quot;logical&quot;:1},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:1,&quot;total&quot;:1,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:3,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:4,&quot;vocabulary&quot;:4,&quot;difficulty&quot;:0.5,&quot;volume&quot;:8,&quot;effort&quot;:4,&quot;bugs&quot;:0.0026666666666666666,&quot;time&quot;:0.2222222222222222},&quot;params&quot;:1}},{&quot;name&quot;:&quot;controller&quot;,&quot;line&quot;:86,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:3,&quot;logical&quot;:1},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:1,&quot;total&quot;:1,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:3,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:4,&quot;vocabulary&quot;:4,&quot;difficulty&quot;:0.5,&quot;volume&quot;:8,&quot;effort&quot;:4,&quot;bugs&quot;:0.0026666666666666666,&quot;time&quot;:0.2222222222222222},&quot;params&quot;:1}},{&quot;name&quot;:&quot;controller&quot;,&quot;line&quot;:76,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:3,&quot;logical&quot;:1},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:1,&quot;total&quot;:1,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:3,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:4,&quot;vocabulary&quot;:4,&quot;difficulty&quot;:0.5,&quot;volume&quot;:8,&quot;effort&quot;:4,&quot;bugs&quot;:0.0026666666666666666,&quot;time&quot;:0.2222222222222222},&quot;params&quot;:1}},{&quot;name&quot;:&quot;controller&quot;,&quot;line&quot;:66,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:3,&quot;logical&quot;:1},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:1,&quot;total&quot;:1,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:3,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:4,&quot;vocabulary&quot;:4,&quot;difficulty&quot;:0.5,&quot;volume&quot;:8,&quot;effort&quot;:4,&quot;bugs&quot;:0.0026666666666666666,&quot;time&quot;:0.2222222222222222},&quot;params&quot;:1}},{&quot;name&quot;:&quot;controller&quot;,&quot;line&quot;:56,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:3,&quot;logical&quot;:1},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:1,&quot;total&quot;:1,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:3,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:4,&quot;vocabulary&quot;:4,&quot;difficulty&quot;:0.5,&quot;volume&quot;:8,&quot;effort&quot;:4,&quot;bugs&quot;:0.0026666666666666666,&quot;time&quot;:0.2222222222222222},&quot;params&quot;:1}},{&quot;name&quot;:&quot;controller&quot;,&quot;line&quot;:32,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:3,&quot;logical&quot;:1},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:1,&quot;total&quot;:1,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:3,&quot;total&quot;:3,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:4,&quot;vocabulary&quot;:4,&quot;difficulty&quot;:0.5,&quot;volume&quot;:8,&quot;effort&quot;:4,&quot;bugs&quot;:0.0026666666666666666,&quot;time&quot;:0.2222222222222222},&quot;params&quot;:1}},{&quot;name&quot;:&quot;getMedia&quot;,&quot;line&quot;:112,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:13,&quot;logical&quot;:4},&quot;cyclomatic&quot;:1,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:6,&quot;total&quot;:10,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:9,&quot;total&quot;:12,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:22,&quot;vocabulary&quot;:15,&quot;difficulty&quot;:4,&quot;volume&quot;:85.95159310338741,&quot;effort&quot;:343.80637241354964,&quot;bugs&quot;:0.02865053103446247,&quot;time&quot;:19.10035402297498},&quot;params&quot;:0}},{&quot;name&quot;:&quot;xhr_gallery.onreadystatechange&quot;,&quot;line&quot;:114,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:8,&quot;logical&quot;:5},&quot;cyclomatic&quot;:2,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:8,&quot;total&quot;:22,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:13,&quot;total&quot;:23,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:45,&quot;vocabulary&quot;:21,&quot;difficulty&quot;:7.076923076923077,&quot;volume&quot;:197.65428402504423,&quot;effort&quot;:1398.7841638695438,&quot;bugs&quot;:0.0658847613416814,&quot;time&quot;:77.71023132608576},&quot;params&quot;:0}}],&quot;maintainability&quot;:67.53578238009061,&quot;params&quot;:0.8181818181818182,&quot;module&quot;:&quot;scripts/app.js&quot;},&quot;jshint&quot;:{&quot;messages&quot;:[]}}</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

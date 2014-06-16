@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - scripts/angular-animate.1.2.8.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome-ie7.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>scripts/angular-animate.1.2.8.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">66.79</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">1</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">108.19</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">8.41</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">(function(ba,bb,bc){&#039;use strict&#039;;bb.module(&#039;ngAnimate&#039;,[&#039;ng&#039;]).config([&#039;$provide&#039;,&#039;$animateProvider&#039;,function(R,S){var T=bb.noop;var U=bb.forEach;var V=S.$$selectors;var W=1;var X=&#039;$$ngAnimateState&#039;;var Y=&#039;ng-animate&#039;;var Z={running:true};function extractElementNode(a){for(var i=0;i&lt;a.length;i++){var b=a[i];if(b.nodeType==W){return b}}}function isMatchingElement(a,b){return extractElementNode(a)==extractElementNode(b)}R.decorator(&#039;$animate&#039;,[&#039;$delegate&#039;,&#039;$injector&#039;,&#039;$sniffer&#039;,&#039;$rootElement&#039;,&#039;$timeout&#039;,&#039;$rootScope&#039;,&#039;$document&#039;,function(z,A,B,C,D,E,F){C.data(X,Z);E.$$postDigest(function(){E.$$postDigest(function(){Z.running=false})});var G=S.classNameFilter();var H=!G?function(){return true}:function(a){return G.test(a)};function lookup(a){if(a){var b=[],flagMap={},classes=a.substr(1).split(&#039;.&#039;);if(B.transitions||B.animations){classes.push(&#039;&#039;)}for(var i=0;i&lt;classes.length;i++){var c=classes[i],selectorFactoryName=V[c];if(selectorFactoryName&amp;&amp;!flagMap[c]){b.push(A.get(selectorFactoryName));flagMap[c]=true}}return b}}return{enter:function(a,b,c,d){this.enabled(false,a);z.enter(a,b,c);E.$$postDigest(function(){performAnimation(&#039;enter&#039;,&#039;ng-enter&#039;,a,b,c,T,d)})},leave:function(a,b){cancelChildAnimations(a);this.enabled(false,a);E.$$postDigest(function(){performAnimation(&#039;leave&#039;,&#039;ng-leave&#039;,a,null,null,function(){z.leave(a)},b)})},move:function(a,b,c,d){cancelChildAnimations(a);this.enabled(false,a);z.move(a,b,c);E.$$postDigest(function(){performAnimation(&#039;move&#039;,&#039;ng-move&#039;,a,b,c,T,d)})},addClass:function(a,b,c){performAnimation(&#039;addClass&#039;,b,a,null,null,function(){z.addClass(a,b)},c)},removeClass:function(a,b,c){performAnimation(&#039;removeClass&#039;,b,a,null,null,function(){z.removeClass(a,b)},c)},enabled:function(a,b){switch(arguments.length){case 2:if(a){cleanup(b)}else{var c=b.data(X)||{};c.disabled=true;b.data(X,c)}break;case 1:Z.disabled=!a;break;default:a=!Z.disabled;break}return!!a}};function performAnimation(j,k,l,m,n,o,p){var q,classes,node=extractElementNode(l);if(node){q=node.className;classes=q+&#039; &#039;+k}if(!node||!H(classes)){fireDOMOperation();closeAnimation();return}var r=(&#039; &#039;+classes).replace(/\s+/g,&#039;.&#039;);if(!m){m=n?n.parent():l.parent()}var s=lookup(r);var t=j==&#039;addClass&#039;||j==&#039;removeClass&#039;;var u=l.data(X)||{};if(animationsDisabled(l,m)||s.length===0){fireDOMOperation();closeAnimation();return}var v=[];var w=t?!u.disabled&amp;&amp;(!u.running||!u.structural):true;if(w){U(s,function(a){if(!a.allowCancel||a.allowCancel(l,j,k)){var b,afterFn=a[j];if(j==&#039;leave&#039;){b=afterFn;afterFn=null}else{b=a[&#039;before&#039;+j.charAt(0).toUpperCase()+j.substr(1)]}v.push({before:b,after:afterFn})}})}if(v.length===0){fireDOMOperation();fireDoneCallbackAsync();return}var x=&#039; &#039;+q+&#039; &#039;;if(u.running){D.cancel(u.closeAnimationTimeout);cleanup(l);cancelAnimations(u.animations);if(u.beforeComplete){(u.done||T)(true)}else if(t&amp;&amp;!u.structural){x=u.event==&#039;removeClass&#039;?x.replace(u.className,&#039;&#039;):x+u.className+&#039; &#039;}}var y=&#039; &#039;+k+&#039; &#039;;if((j==&#039;addClass&#039;&amp;&amp;x.indexOf(y)&gt;=0)||(j==&#039;removeClass&#039;&amp;&amp;x.indexOf(y)==-1)){fireDOMOperation();fireDoneCallbackAsync();return}l.addClass(Y);l.data(X,{running:true,event:j,className:k,structural:!t,animations:v,done:onBeforeAnimationsComplete});invokeRegisteredAnimationFns(v,&#039;before&#039;,onBeforeAnimationsComplete);function onBeforeAnimationsComplete(a){fireDOMOperation();if(a===true){closeAnimation();return}var b=l.data(X);if(b){b.done=closeAnimation;l.data(X,b)}invokeRegisteredAnimationFns(v,&#039;after&#039;,closeAnimation)}function invokeRegisteredAnimationFns(e,f,g){var h=f+&#039;End&#039;;U(e,function(a,b){var c=function(){progress(b,f)};if(f==&#039;before&#039;&amp;&amp;(j==&#039;enter&#039;||j==&#039;move&#039;)){c();return}if(a[f]){a[h]=t?a[f](l,k,c):a[f](l,c)}else{c()}});function progress(a,b){var c=b+&#039;Complete&#039;;var d=e[a];d[c]=true;(d[h]||T)();for(var i=0;i&lt;e.length;i++){if(!e[i][c])return}g()}}function fireDoneCallbackAsync(){p&amp;&amp;D(p,0,false)}function fireDOMOperation(){if(!fireDOMOperation.hasBeenRun){fireDOMOperation.hasBeenRun=true;o()}}function closeAnimation(){if(!closeAnimation.hasBeenRun){closeAnimation.hasBeenRun=true;var a=l.data(X);if(a){if(t){cleanup(l)}else{a.closeAnimationTimeout=D(function(){cleanup(l)},0,false);l.data(X,a)}}fireDoneCallbackAsync()}}}function cancelChildAnimations(c){var d=extractElementNode(c);U(d.querySelectorAll(&#039;.&#039;+Y),function(a){a=bb.element(a);var b=a.data(X);if(b){cancelAnimations(b.animations);cleanup(a)}})}function cancelAnimations(b){var c=true;U(b,function(a){if(!b.beforeComplete){(a.beforeEnd||T)(c)}if(!b.afterComplete){(a.afterEnd||T)(c)}})}function cleanup(a){if(isMatchingElement(a,C)){if(!Z.disabled){Z.running=false;Z.structural=false}}else{a.removeClass(Y);a.removeData(X)}}function animationsDisabled(a,b){if(Z.disabled)return true;if(isMatchingElement(a,C)){return Z.disabled||Z.running}do{if(b.length===0)break;var c=isMatchingElement(b,C);var d=c?Z:b.data(X);var e=d&amp;&amp;(!!d.disabled||!!d.running);if(c||e){return e}if(c)return true}while(b=b.parent());return true}}]);S.register(&#039;&#039;,[&#039;$window&#039;,&#039;$sniffer&#039;,&#039;$timeout&#039;,function(w,x,y){var z=&#039;&#039;,TRANSITION_PROP,TRANSITIONEND_EVENT,ANIMATION_PROP,ANIMATIONEND_EVENT;if(ba.ontransitionend===bc&amp;&amp;ba.onwebkittransitionend!==bc){z=&#039;-webkit-&#039;;TRANSITION_PROP=&#039;WebkitTransition&#039;;TRANSITIONEND_EVENT=&#039;webkitTransitionEnd transitionend&#039;}else{TRANSITION_PROP=&#039;transition&#039;;TRANSITIONEND_EVENT=&#039;transitionend&#039;}if(ba.onanimationend===bc&amp;&amp;ba.onwebkitanimationend!==bc){z=&#039;-webkit-&#039;;ANIMATION_PROP=&#039;WebkitAnimation&#039;;ANIMATIONEND_EVENT=&#039;webkitAnimationEnd animationend&#039;}else{ANIMATION_PROP=&#039;animation&#039;;ANIMATIONEND_EVENT=&#039;animationend&#039;}var A=&#039;Duration&#039;;var B=&#039;Property&#039;;var C=&#039;Delay&#039;;var D=&#039;IterationCount&#039;;var E=&#039;$$ngAnimateKey&#039;;var F=&#039;$$ngAnimateCSS3Data&#039;;var G=3;var H=1.5;var I=1000;var J=0;var K={};var L=0;var M=[];var N=[];var O;var P=0;var Q=false;function afterReflow(d,e){y.cancel(O);M.push(e);var f=extractElementNode(d);d=bb.element(f);N.push(d);var g=d.data(F);P=Math.max(P,(g.maxDelay+g.maxDuration)*H*I);g.animationCount=J;O=y(function(){U(M,function(a){a()});var b=[];var c=J;U(N,function(a){b.push(a)});y(function(){closeAllAnimations(b,c);b=null},P,false);M=[];N=[];O=null;K={};P=0;J++},10,false)}function closeAllAnimations(c,d){U(c,function(a){var b=a.data(F);if(b&amp;&amp;b.animationCount==d){(b.closeAnimationFn||T)()}})}function getElementAnimationDetails(d,e){var f=e?K[e]:null;if(!f){var g=0;var h=0;var i=0;var j=0;var k;var l;var m;var n;U(d,function(a){if(a.nodeType==W){var b=w.getComputedStyle(a)||{};m=b[TRANSITION_PROP+A];g=Math.max(parseMaxTime(m),g);n=b[TRANSITION_PROP+B];k=b[TRANSITION_PROP+C];h=Math.max(parseMaxTime(k),h);l=b[ANIMATION_PROP+C];j=Math.max(parseMaxTime(l),j);var c=parseMaxTime(b[ANIMATION_PROP+A]);if(c&gt;0){c*=parseInt(b[ANIMATION_PROP+D],10)||1}i=Math.max(c,i)}});f={total:0,transitionPropertyStyle:n,transitionDurationStyle:m,transitionDelayStyle:k,transitionDelay:h,transitionDuration:g,animationDelayStyle:l,animationDelay:j,animationDuration:i};if(e){K[e]=f}}return f}function parseMaxTime(b){var c=0;var d=bb.isString(b)?b.split(/\s*,\s*/):[];U(d,function(a){c=Math.max(parseFloat(a)||0,c)});return c}function getCacheKey(a){var b=a.parent();var c=b.data(E);if(!c){b.data(E,++L);c=L}return c+&#039;-&#039;+extractElementNode(a).className}function animateSetup(b,c){var d=getCacheKey(b);var e=d+&#039; &#039;+c;var f={};var g=K[e]?++K[e].total:0;if(g&gt;0){var h=c+&#039;-stagger&#039;;var j=d+&#039; &#039;+h;var k=!K[j];k&amp;&amp;b.addClass(h);f=getElementAnimationDetails(b,j);k&amp;&amp;b.removeClass(h)}b.addClass(c);var l=getElementAnimationDetails(b,e);var m=Math.max(l.transitionDelay,l.animationDelay);var n=Math.max(l.transitionDuration,l.animationDuration);if(n===0){b.removeClass(c);return false}var o=&#039;&#039;;l.transitionDuration&gt;0?blockTransitions(b):blockKeyframeAnimations(b);U(c.split(&#039; &#039;),function(a,i){o+=(i&gt;0?&#039; &#039;:&#039;&#039;)+a+&#039;-active&#039;});b.data(F,{className:c,activeClassName:o,maxDuration:n,maxDelay:m,classes:c+&#039; &#039;+o,timings:l,stagger:f,ii:g});return true}function blockTransitions(a){extractElementNode(a).style[TRANSITION_PROP+B]=&#039;none&#039;}function blockKeyframeAnimations(a){extractElementNode(a).style[ANIMATION_PROP]=&#039;none 0s&#039;}function unblockTransitions(a){var b=TRANSITION_PROP+B;var c=extractElementNode(a);if(c.style[b]&amp;&amp;c.style[b].length&gt;0){c.style[b]=&#039;&#039;}}function unblockKeyframeAnimations(a){var b=ANIMATION_PROP;var c=extractElementNode(a);if(c.style[b]&amp;&amp;c.style[b].length&gt;0){c.style[b]=&#039;&#039;}}function animateRun(e,f,g){var h=e.data(F);var j=extractElementNode(e);if(j.className.indexOf(f)==-1||!h){g();return}var k=h.timings;var l=h.stagger;var m=h.maxDuration;var n=h.activeClassName;var o=Math.max(k.transitionDelay,k.animationDelay)*I;var p=Date.now();var q=ANIMATIONEND_EVENT+&#039; &#039;+TRANSITIONEND_EVENT;var r=h.ii;var s=&#039;&#039;,appliedStyles=[];if(k.transitionDuration&gt;0){var t=k.transitionPropertyStyle;if(t.indexOf(&#039;all&#039;)==-1){s+=z+&#039;transition-property: &#039;+t+&#039;;&#039;;s+=z+&#039;transition-duration: &#039;+k.transitionDurationStyle+&#039;;&#039;;appliedStyles.push(z+&#039;transition-property&#039;);appliedStyles.push(z+&#039;transition-duration&#039;)}}if(r&gt;0){if(l.transitionDelay&gt;0&amp;&amp;l.transitionDuration===0){var u=k.transitionDelayStyle;s+=z+&#039;transition-delay: &#039;+prepareStaggerDelay(u,l.transitionDelay,r)+&#039;; &#039;;appliedStyles.push(z+&#039;transition-delay&#039;)}if(l.animationDelay&gt;0&amp;&amp;l.animationDuration===0){s+=z+&#039;animation-delay: &#039;+prepareStaggerDelay(k.animationDelayStyle,l.animationDelay,r)+&#039;; &#039;;appliedStyles.push(z+&#039;animation-delay&#039;)}}if(appliedStyles.length&gt;0){var v=j.getAttribute(&#039;style&#039;)||&#039;&#039;;j.setAttribute(&#039;style&#039;,v+&#039; &#039;+s)}e.on(q,onAnimationProgress);e.addClass(n);h.closeAnimationFn=function(){onEnd();g()};return onEnd;function onEnd(a){e.off(q,onAnimationProgress);e.removeClass(n);animateClose(e,f);var b=extractElementNode(e);for(var i in appliedStyles){b.style.removeProperty(appliedStyles[i])}}function onAnimationProgress(a){a.stopPropagation();var b=a.originalEvent||a;var c=b.$manualTimeStamp||b.timeStamp||Date.now();var d=parseFloat(b.elapsedTime.toFixed(G));if(Math.max(c-p,0)&gt;=o&amp;&amp;d&gt;=m){g()}}}function prepareStaggerDelay(b,c,d){var e=&#039;&#039;;U(b.split(&#039;,&#039;),function(a,i){e+=(i&gt;0?&#039;,&#039;:&#039;&#039;)+(d*c+parseInt(a,10))+&#039;s&#039;});return e}function animateBefore(b,c){if(animateSetup(b,c)){return function(a){a&amp;&amp;animateClose(b,c)}}}function animateAfter(a,b,c){if(a.data(F)){return animateRun(a,b,c)}else{animateClose(a,b);c()}}function animate(b,c,d){var e=animateBefore(b,c);if(!e){d();return}var f=e;afterReflow(b,function(){unblockTransitions(b);unblockKeyframeAnimations(b);f=animateAfter(b,c,d)});return function(a){(f||T)(a)}}function animateClose(a,b){a.removeClass(b);a.removeData(F)}return{allowCancel:function(b,c,d){var e=(b.data(F)||{}).classes;if(!e||[&#039;enter&#039;,&#039;leave&#039;,&#039;move&#039;].indexOf(c)&gt;=0){return true}var f=b.parent();var g=bb.element(extractElementNode(b).cloneNode());g.attr(&#039;style&#039;,&#039;position:absolute; top:-9999px; left:-9999px&#039;);g.removeAttr(&#039;id&#039;);g.empty();U(e.split(&#039; &#039;),function(a){g.removeClass(a)});var h=c==&#039;addClass&#039;?&#039;-add&#039;:&#039;-remove&#039;;g.addClass(suffixClasses(d,h));f.append(g);var i=getElementAnimationDetails(g);g.remove();return Math.max(i.transitionDuration,i.animationDuration)&gt;0},enter:function(a,b){return animate(a,&#039;ng-enter&#039;,b)},leave:function(a,b){return animate(a,&#039;ng-leave&#039;,b)},move:function(a,b){return animate(a,&#039;ng-move&#039;,b)},beforeAddClass:function(a,b,c){var d=animateBefore(a,suffixClasses(b,&#039;-add&#039;));if(d){afterReflow(a,function(){unblockTransitions(a);unblockKeyframeAnimations(a);c()});return d}c()},addClass:function(a,b,c){return animateAfter(a,suffixClasses(b,&#039;-add&#039;),c)},beforeRemoveClass:function(a,b,c){var d=animateBefore(a,suffixClasses(b,&#039;-remove&#039;));if(d){afterReflow(a,function(){unblockTransitions(a);unblockKeyframeAnimations(a);c()});return d}c()},removeClass:function(a,b,c){return animateAfter(a,suffixClasses(b,&#039;-remove&#039;),c)}};function suffixClasses(b,c){var d=&#039;&#039;;b=bb.isArray(b)?b:b.split(/\s+/);U(b,function(a,i){if(a&amp;&amp;a.length&gt;0){d+=(i&gt;0?&#039; &#039;:&#039;&#039;)+a+c}});return d}}])}])})(window,window.angular);</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

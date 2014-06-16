@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - coverage/report.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome-ie7.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>coverage/report.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">25.03</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">1</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">6.58</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">2.42</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">__report = {&quot;summary&quot;:{&quot;total&quot;:{&quot;sloc&quot;:26101,&quot;maintainability&quot;:515.7817980129704},&quot;average&quot;:{&quot;sloc&quot;:3262,&quot;maintainability&quot;:&quot;64.47&quot;}},&quot;reports&quot;:[{&quot;info&quot;:{&quot;file&quot;:&quot;scripts/angular-animate.1.2.8.js&quot;,&quot;fileShort&quot;:&quot;scripts/angular-animate.1.2.8.js&quot;,&quot;fileSafe&quot;:&quot;scripts_angular_animate_1_2_8_js&quot;,&quot;link&quot;:&quot;files/scripts_angular_animate_1_2_8_js/index.html&quot;},&quot;jshint&quot;:{&quot;messages&quot;:51},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:1,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:1,&quot;logical&quot;:543},&quot;cyclomatic&quot;:114,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:36,&quot;total&quot;:1325,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:284,&quot;total&quot;:1707,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:3032,&quot;vocabulary&quot;:320,&quot;difficulty&quot;:108.19014084507042,&quot;volume&quot;:25232.085983698482,&quot;effort&quot;:2729862.936391266,&quot;bugs&quot;:8.410695327899495,&quot;time&quot;:151659.052021737},&quot;params&quot;:130}},&quot;module&quot;:&quot;scripts/angular-animate.1.2.8.js&quot;,&quot;maintainability&quot;:66.79231938160986}},{&quot;info&quot;:{&quot;file&quot;:&quot;scripts/angular-animate.1.2.8.raw.js&quot;,&quot;fileShort&quot;:&quot;scripts/angular-animate.1.2.8.raw.js&quot;,&quot;fileSafe&quot;:&quot;scripts_angular_animate_1_2_8_raw_js&quot;,&quot;link&quot;:&quot;files/scripts_angular_animate_1_2_8_raw_js/index.html&quot;},&quot;jshint&quot;:{&quot;messages&quot;:7},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:6,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:1375,&quot;logical&quot;:543},&quot;cyclomatic&quot;:114,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:36,&quot;total&quot;:1325,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:335,&quot;total&quot;:1707,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:3032,&quot;vocabulary&quot;:371,&quot;difficulty&quot;:91.71940298507462,&quot;volume&quot;:25878.95494191427,&quot;effort&quot;:2373602.2971500233,&quot;bugs&quot;:8.626318313971424,&quot;time&quot;:131866.79428611242},&quot;params&quot;:130}},&quot;module&quot;:&quot;scripts/angular-animate.1.2.8.raw.js&quot;,&quot;maintainability&quot;:66.69127773599837}},{&quot;info&quot;:{&quot;file&quot;:&quot;scripts/angular-ui-router.0.2.10.js&quot;,&quot;fileShort&quot;:&quot;scripts/angular-ui-router.0.2.10.js&quot;,&quot;fileSafe&quot;:&quot;scripts_angular_ui_router_0_2_10_js&quot;,&quot;link&quot;:&quot;files/scripts_angular_ui_router_0_2_10_js/index.html&quot;},&quot;jshint&quot;:{&quot;messages&quot;:51},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:1,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:1,&quot;logical&quot;:1106},&quot;cyclomatic&quot;:256,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:42,&quot;total&quot;:2949,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:494,&quot;total&quot;:3716,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:6665,&quot;vocabulary&quot;:536,&quot;difficulty&quot;:157.9676113360324,&quot;volume&quot;:60425.48445440105,&quot;effort&quot;:9545269.443084292,&quot;bugs&quot;:20.141828151467017,&quot;time&quot;:530292.7468380162},&quot;params&quot;:272}},&quot;module&quot;:&quot;scripts/angular-ui-router.0.2.10.js&quot;,&quot;maintainability&quot;:66.6482426272666}},{&quot;info&quot;:{&quot;file&quot;:&quot;scripts/angular-ui-router.0.2.10.raw.js&quot;,&quot;fileShort&quot;:&quot;scripts/angular-ui-router.0.2.10.raw.js&quot;,&quot;fileSafe&quot;:&quot;scripts_angular_ui_router_0_2_10_raw_js&quot;,&quot;link&quot;:&quot;files/scripts_angular_ui_router_0_2_10_raw_js/index.html&quot;},&quot;jshint&quot;:{&quot;messages&quot;:7},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:9,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:3215,&quot;logical&quot;:1106},&quot;cyclomatic&quot;:256,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:42,&quot;total&quot;:2949,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:594,&quot;total&quot;:3716,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:6665,&quot;vocabulary&quot;:636,&quot;difficulty&quot;:131.37373737373738,&quot;volume&quot;:62070.36489697023,&quot;effort&quot;:8154415.816666615,&quot;bugs&quot;:20.69012163232341,&quot;time&quot;:453023.1009259231},&quot;params&quot;:272}},&quot;module&quot;:&quot;scripts/angular-ui-router.0.2.10.raw.js&quot;,&quot;maintainability&quot;:66.6043437691444}},{&quot;info&quot;:{&quot;file&quot;:&quot;scripts/angular.1.2.10.js&quot;,&quot;fileShort&quot;:&quot;scripts/angular.1.2.10.js&quot;,&quot;fileSafe&quot;:&quot;scripts_angular_1_2_10_js&quot;,&quot;link&quot;:&quot;files/scripts_angular_1_2_10_js/index.html&quot;},&quot;jshint&quot;:{&quot;messages&quot;:51},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:6,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:20589,&quot;logical&quot;:6258},&quot;cyclomatic&quot;:1441,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:56,&quot;total&quot;:15124,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:2514,&quot;total&quot;:19487,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:34611,&quot;vocabulary&quot;:2570,&quot;difficulty&quot;:217.0389817024662,&quot;volume&quot;:392057.9245642958,&quot;effort&quot;:85091852.71581706,&quot;bugs&quot;:130.68597485476528,&quot;time&quot;:4727325.150878726},&quot;params&quot;:1463}},&quot;module&quot;:&quot;scripts/angular.1.2.10.js&quot;,&quot;maintainability&quot;:66.05014341708504}},{&quot;info&quot;:{&quot;file&quot;:&quot;scripts/app.js&quot;,&quot;fileShort&quot;:&quot;scripts/app.js&quot;,&quot;fileSafe&quot;:&quot;scripts_app_js&quot;,&quot;link&quot;:&quot;files/scripts_app_js/index.html&quot;},&quot;jshint&quot;:{&quot;messages&quot;:0},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:1,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:124,&quot;logical&quot;:76},&quot;cyclomatic&quot;:3,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:13,&quot;total&quot;:190,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:89,&quot;total&quot;:237,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:427,&quot;vocabulary&quot;:102,&quot;difficulty&quot;:17.308988764044944,&quot;volume&quot;:2849.1256210218285,&quot;effort&quot;:49315.4833616194,&quot;bugs&quot;:0.9497085403406095,&quot;time&quot;:2739.749075645522},&quot;params&quot;:9}},&quot;module&quot;:&quot;scripts/app.js&quot;,&quot;maintainability&quot;:67.53578238009061}},{&quot;info&quot;:{&quot;file&quot;:&quot;scripts/controllers/postCtrl.js&quot;,&quot;fileShort&quot;:&quot;scripts/controllers/postCtrl.js&quot;,&quot;fileSafe&quot;:&quot;scripts_controllers_postCtrl_js&quot;,&quot;link&quot;:&quot;files/scripts_controllers_postCtrl_js/index.html&quot;},&quot;jshint&quot;:{&quot;messages&quot;:0},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:1,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:26,&quot;logical&quot;:19},&quot;cyclomatic&quot;:5,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:13,&quot;total&quot;:75,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:32,&quot;total&quot;:84,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:159,&quot;vocabulary&quot;:45,&quot;difficulty&quot;:17.0625,&quot;volume&quot;:873.2046423164182,&quot;effort&quot;:14899.054209523887,&quot;bugs&quot;:0.29106821410547273,&quot;time&quot;:827.7252338624381},&quot;params&quot;:1}},&quot;module&quot;:&quot;scripts/controllers/postCtrl.js&quot;,&quot;maintainability&quot;:54.8194599106375}},{&quot;info&quot;:{&quot;file&quot;:&quot;scripts/fastclick.js&quot;,&quot;fileShort&quot;:&quot;scripts/fastclick.js&quot;,&quot;fileSafe&quot;:&quot;scripts_fastclick_js&quot;,&quot;link&quot;:&quot;files/scripts_fastclick_js/index.html&quot;},&quot;jshint&quot;:{&quot;messages&quot;:0},&quot;complexity&quot;:{&quot;aggregate&quot;:{&quot;line&quot;:21,&quot;complexity&quot;:{&quot;sloc&quot;:{&quot;physical&quot;:770,&quot;logical&quot;:315},&quot;cyclomatic&quot;:89,&quot;halstead&quot;:{&quot;operators&quot;:{&quot;distinct&quot;:30,&quot;total&quot;:751,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;operands&quot;:{&quot;distinct&quot;:197,&quot;total&quot;:930,&quot;identifiers&quot;:[&quot;__stripped__&quot;]},&quot;length&quot;:1681,&quot;vocabulary&quot;:227,&quot;difficulty&quot;:70.81218274111676,&quot;volume&quot;:13156.42800713603,&quot;effort&quot;:931635.3842616631,&quot;bugs&quot;:4.3854760023786765,&quot;time&quot;:51757.52134787017},&quot;params&quot;:30}},&quot;module&quot;:&quot;scripts/fastclick.js&quot;,&quot;maintainability&quot;:60.640228791138085}}]}</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

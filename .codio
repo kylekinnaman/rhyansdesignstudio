@@ -1,10 +1,11 @@
 {
   "commands": {
-        "Grunt": "grunt"
+    "Grunt": "grunt",
+    "Plato": "plato -rd coverage scripts/app.js scripts/controllers"
   },
   "preview": {
-        "Live": "http://rhyansdesignstudio.com/beta/{{index}}",
-        "Github": "http://kylekinnaman.github.io/rhyansdesignstudio/{{index}}",
-        "Preview": "http://{{domain}}/{{index}}"
+    "Live": "http://rhyansdesignstudio.com/beta/{{index}}",
+    "Github": "http://kylekinnaman.github.io/rhyansdesignstudio/{{index}}",
+    "Preview": "http://{{domain}}/{{index}}"
   }
 }
