@@ -2,7 +2,7 @@
 
 I really hate [Markdown](http://daringfireball.net/projects/markdown/). It's just one more pseudo-syntax to remember.
 
-![](//ring.png)
+![](images/ring.png)
 
 [Search link](http://www.google.com "Le Google")
 
