@@ -2,7 +2,7 @@
 
 I really hate [Markdown](http://daringfireball.net/projects/markdown/). It's just one more pseudo-syntax to remember.
 
-![My car](//Koenigsegg-Koenigsegg-Agera-2-1200x1920.jpg)
+![Bling!](//ring.png)
 
 [Search, baby!](http://www.google.com "Le Google")
 
