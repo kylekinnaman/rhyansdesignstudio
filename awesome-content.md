@@ -2,9 +2,9 @@
 
 I really hate [Markdown](http://daringfireball.net/projects/markdown/). It's just one more pseudo-syntax to remember.
 
-![Bling!](//ring.png)
+![](//ring.png)
 
-[Search, baby!](http://www.google.com "Le Google")
+[Search link](http://www.google.com "Le Google")
 
 1. list 1
 2. list 2
